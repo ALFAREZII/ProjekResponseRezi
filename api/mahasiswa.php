@@ -147,7 +147,7 @@ switch ($method) {
         $stmt = mysqli_prepare($koneksi, "SELECT id FROM jurusan WHERE id = ?");
         if (!$stmt) {
             error_log(mysqli_error($koneksi));
-            sendResponse(false, 'terjadi kesalahan pada server', null, 500);
+            sendResponse(false, 'terjadi kesalahan pada server yahaha', null, 500);
         }
         mysqli_stmt_bind_param($stmt, "i", $jurusan_id);
         mysqli_stmt_execute($stmt);
@@ -160,7 +160,7 @@ switch ($method) {
         $stmt = mysqli_prepare($koneksi, "SELECT id FROM mahasiswa WHERE nim = ?");
         if (!$stmt) {
             error_log(mysqli_error($koneksi));
-            sendResponse(false, 'terjadi kesalahan pada server', null, 500);
+            sendResponse(false, 'terjadi kesalahan pada server wayaw', null, 500);
         }
         mysqli_stmt_bind_param($stmt, "s", $nim);
         mysqli_stmt_execute($stmt);
