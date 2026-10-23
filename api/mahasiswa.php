@@ -169,7 +169,7 @@ switch ($method) {
             sendResponse(false, 'NIM sudah terdaftar', null, 409);
         }
 
-        // INSERTTTTT
+        // INSERTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT (pls jgn eror agik)
         $stmt = mysqli_prepare($koneksi, 
             "INSERT INTO mahasiswa (nama, nim, jurusan_id, created_at) VALUES (?, ?, ?, CURDATE())"
         );
@@ -212,7 +212,7 @@ switch ($method) {
         $nim        = trim($input['nim']);
         $jurusan_id = (int) $input['jurusan_id'];
 
-        // Cek jurusan ada
+        // Cek jurusan ade dak?
         $stmt = mysqli_prepare($koneksi, "SELECT id FROM jurusan WHERE id = ?");
         if (!$stmt) {
             error_log(mysqli_error($koneksi));
@@ -225,7 +225,7 @@ switch ($method) {
             sendResponse(false, 'jurusan tidak ditemukan', null, 404);
         }
 
-        // Cek mahasiswaa
+        // Cek mahasiswaa ngawi
         $stmt = mysqli_prepare($koneksi, "SELECT id FROM mahasiswa WHERE id = ?");
         if (!$stmt) {
             error_log(mysqli_error($koneksi));
